@@ -1,0 +1,70 @@
+Bitnami Gitlab Installation:
+
+Login to https://bitnami.com/
+
+Select Applicatoin-> Search (gitlab) ->CLick on Gitlab CE ICON -> Click on Virtual Machine -> Scroll Down and download.vmdk format
+
+Will download zip file package -> extract it -> Open bitnami-gitlab-13.9.2-0-linux-debian-10-x86_64.vmx it will start VM in your VMware workstation -> Enter credetntials -> user Name: bitnami PASW: bitnami -> will prompt to change password you can change else continue with same password.
+
+restart machine login again and check process of gitlab installation with 
+
+to check installation status 
+sudo gitlab-ctl tail
+
+to restart gitalab
+sudo gitlab-ctl restart
+
+after restarting it will show you the IP address to access gitalab and use it
+
+http://192.168.1.103
+username: root
+pwd: h4ihbPFxzk10
+
+to access console please use 
+login: bitnami
+pwd: bitnami
+
+
+
+to change gitlab login root password use below command:
+sudo gitlab-rake "gitlab:password:reset"
+
+user name: root
+New password: root@123
+-----------------------------------------------------------------------------------------------------------------
+
+Git global setup
+git config --global user.name "Administrator"
+git config --global user.email "admin@example.com"
+
+Create a new repository
+git clone https://192.168.1.103/gitlab-instance-068631b3/Monitoring.git
+cd Monitoring
+touch README.md
+git add README.md
+git commit -m "add README"
+git push -u origin master
+
+Push an existing folder
+cd existing_folder
+git init
+git remote add origin https://192.168.1.103/gitlab-instance-068631b3/Monitoring.git
+git add .
+git commit -m "Initial commit"
+git push -u origin master
+
+Push an existing Git repository
+cd existing_repo
+git remote rename origin old-origin
+git remote add origin https://192.168.1.103/gitlab-instance-068631b3/Monitoring.git
+git push -u origin --all
+git push -u origin --tags
+
+--------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+ 
