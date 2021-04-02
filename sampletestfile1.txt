@@ -1,2 +1,7 @@
 This is sample file 1
 This is modified for merge branch in git practice.
+
+Testing reset commit
+Testing revert commit
+This is Comparison lecture
+
