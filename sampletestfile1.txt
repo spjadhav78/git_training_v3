@@ -5,3 +5,4 @@ Testing reset commit
 Testing revert commit
 This is Comparison lecture
 
+This is Stash lecture, Change in File 1
